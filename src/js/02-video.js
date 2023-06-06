@@ -10,10 +10,10 @@ const player = new Player(iframe);
 player.on('timeupdate', throttle(onTimeupdate, 1000));
 function onTimeupdate(event) {
   const time = event.seconds;
-//   console.log(time);
   localStorage.setItem(LOCAL_KEY, time);
 }
 
-const savedTime = localStorage.getItem(LOCAL_KEY);
-console.log(savedTime);
-player.setCurrentTime(savedTime);
+const savedTime = localStorage.getItem(LOCAL_KEY) || 0;
+
+  console.log(savedTime);
+  player.setCurrentTime(savedTime);
