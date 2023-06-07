@@ -29,8 +29,7 @@ function fiilForm () {
 
 function onInput(event){
    formData[event.target.name] = event.target.value;
-   localStorage.setItem(LOCAL_KEY, JSON.stringify(formData));
-   
+   localStorage.setItem(LOCAL_KEY, JSON.stringify(formData));  
 }
 
 function onFormSubmit(event) {
