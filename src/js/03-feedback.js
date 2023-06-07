@@ -1,3 +1,4 @@
+
 import throttle from 'lodash.throttle';
 
 let formData = {};
@@ -18,7 +19,7 @@ function fiilForm () {
    try {
        const saveMassege = localStorage.getItem(LOCAL_KEY);
        if (saveMassege) {
-           const saveArray = JSON.parse(saveMassege);
+           formData = JSON.parse(saveMassege);
            Object.entries(formData).forEach(({key, value}) => refs.formEl.elements[key].value = formData(value))  
 } 
 } catch(error) {   
